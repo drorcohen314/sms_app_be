@@ -28,12 +28,12 @@ class MessagesController < ApplicationController
             @message = Message.new(message_params)
             @message.sender = @sender.key
             @id = Message.maximum(:id) + 1
+            @callback_path = 'http://' + request.host.to_s, + ':' + request.port.to_s + '/update_status/' + @id.to_s
             message = client.messages.create(
             from: from,
             to: to,
             body: message_params[:content],
-            status_callback: 'http://172.20.10.2:3000/update_status/' + @id.to_s,
-            )
+            status_callback: @callback_path)
 
             if @message.save
                 render json: @message, status: :created

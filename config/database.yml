@@ -24,6 +24,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  url: postgres://dhdwsuiyheeqlk:42c7ebca5e255cb90893b0376fc446afe137456e6d937f285008ec17b2ca897f@ec2-54-246-1-94.eu-west-1.compute.amazonaws.com:5432/demm5lffvsa5l9
+  url: <%= ENV["DATABASE_URL"] %>
   username: dhdwsuiyheeqlk
-  password: 42c7ebca5e255cb90893b0376fc446afe137456e6d937f285008ec17b2ca897f 
+  password: <%= ENV["DATABASE_PASSWORD"] %>

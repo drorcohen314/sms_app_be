@@ -51,7 +51,7 @@ class MessagesController < ApplicationController
     end
 
     def update_message_status
-        if params[:MessageStatus].in?(%w[sent delivered])
+        if params[:MessageStatus].in?(%w[sent delivered]) || params[:SmsStatus].in?(%w[sent delivered])
             @message.update(sent: true)
             ActionCable.server.broadcast("message_status_#{@message.sender}", {id:@message.id, sent:@message.sent})
             render json: { message: 'Message status updated successfully' }, status: :ok

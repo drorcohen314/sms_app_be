@@ -1,1 +1,1 @@
-release: ./release.cmd
+release: chmod +x release.sh && ./release.sh

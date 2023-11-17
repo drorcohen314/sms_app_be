@@ -27,7 +27,12 @@ class MessagesController < ApplicationController
             
             @message = Message.new(message_params)
             @message.sender = @sender.key
-            @id = Message.maximum(:id) + 1
+            max_id = Message.maximum(:id)
+            if max_id.nil?
+                @id = 1 
+            else
+                @id = max_id + 1
+            end
             @callback_path = 'http://' + request.host.to_s + ':' + request.port.to_s + '/update_status/' + @id.to_s
             message = client.messages.create(
             from: from,

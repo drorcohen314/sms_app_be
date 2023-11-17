@@ -33,9 +33,7 @@ class MessagesController < ApplicationController
             else
                 @id = max_id + 1
             end
-            puts 'HOST ----------------------------------------------------------------'
-            puts request.host.to_s
-            @callback_path = 'https://' + request.host.to_s + ':' + request.port.to_s + '/update_status/' + @id.to_s
+            @callback_path = 'https://' + request.host.to_s + ':' + request.port.to_s + 'messages/update_status/' + @id.to_s
             message = client.messages.create(
             from: from,
             to: to,

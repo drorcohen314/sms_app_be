@@ -83,28 +83,20 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
-    daemons (1.4.1)
     date (3.3.4)
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     drb (2.2.0)
       ruby2_keywords
-    em-synchrony (1.0.6)
-      eventmachine (>= 1.0.0.beta.1)
     erubi (1.12.0)
-    eventmachine (1.2.7)
     faraday (2.7.11)
       base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
-    faye-websocket (0.11.3)
-      eventmachine (>= 0.12.0)
-      websocket-driver (>= 0.5.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hiredis (0.6.3)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -186,22 +178,12 @@ GEM
     rake (13.1.0)
     rdoc (6.6.0)
       psych (>= 4.0.0)
-    redis (5.0.8)
-      redis-client (>= 0.17.0)
-    redis-client (0.18.0)
-      connection_pool
-    redis-objects (1.7.0)
-      redis
     reline (0.4.0)
       io-console (~> 0.5)
     ruby2_keywords (0.0.5)
     sqlite3 (1.6.8-x64-mingw-ucrt)
     sqlite3 (1.6.8-x86_64-linux)
     stringio (3.0.9)
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
     thor (1.3.0)
     timeout (0.4.1)
     twilio-ruby (6.8.1)
@@ -216,15 +198,6 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    websocket-rails (0.7.0)
-      em-synchrony
-      faye-websocket
-      hiredis
-      rack
-      rails
-      redis
-      redis-objects
-      thin
     zeitwerk (2.6.12)
 
 PLATFORMS
@@ -240,7 +213,6 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   twilio-ruby
   tzinfo-data
-  websocket-rails
 
 RUBY VERSION
    ruby 3.2.2p53

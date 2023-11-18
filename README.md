@@ -1,24 +1,23 @@
-# README
+### Prepare the server
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+``` bash
+bundle install
+rails db:load:schema
+rails db:migrate
+```
 
-Things you may want to cover:
+### Run
+``` bash
+rail server
+```
 
-* Ruby version
+### THE SERVER REQUIRES A FEW ENVIRONMENT VARIABLES:
+TWILIO_ACCOUNT_SID
+TWILIO_AUTH_TOKEN
+TWILIO_PHONE_NUMBER
 
-* System dependencies
+### AND IN PRODUCTION 
+DATABASE_URL
+DATABASE_USERNAME
+DATABASE_PASSWORD
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

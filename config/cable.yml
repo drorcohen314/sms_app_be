@@ -9,3 +9,4 @@ production:
   url: <%= ENV["DATABASE_URL"] %>
   username: <%= ENV["DATABASE_USERNAME"] %>
   password: <%= ENV["DATABASE_PASSWORD"] %>
+  verify_ssl: false # Disable SSL verification for WebSocket connections

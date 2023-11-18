@@ -25,5 +25,5 @@ production:
   <<: *default
   adapter: postgresql
   url: <%= ENV["DATABASE_URL"] %>
-  username: dhdwsuiyheeqlk
+  username: <%= ENV["DATABASE_USERNAME"] %>
   password: <%= ENV["DATABASE_PASSWORD"] %>

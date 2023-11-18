@@ -5,5 +5,7 @@ test:
   adapter: test
 
 production:
-  adapter: async
-  channel_prefix: be_production
+  adapter: postgresql
+  url: <%= ENV["DATABASE_URL"] %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
